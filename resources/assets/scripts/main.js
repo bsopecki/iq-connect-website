@@ -2,7 +2,7 @@
 import 'jquery';
 
 // Import everything from autoload
-import './autoload/**/*';
+import './autoload/**/*'
 
 // import local dependencies
 import Router from './util/Router';
@@ -12,6 +12,7 @@ import aboutUs from './routes/about';
 
 
 /** Populate Router instance with DOM routes */
+// eslint-disable-next-line no-unused-vars
 const routes = new Router({
   // All pages
   common,
@@ -26,7 +27,5 @@ jQuery(document).ready(() => {
   
 });
 
-// setTimeout(()=> {
-//   slider.resize();
-// }, 1000)
+
 
