@@ -1,0 +1,4 @@
+.container {
+  width: calc(100% - #{$gutter * 50});
+  margin: 0 auto;
+}
