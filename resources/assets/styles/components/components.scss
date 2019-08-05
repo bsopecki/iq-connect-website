@@ -1,0 +1,13 @@
+.container {
+  width: calc(100% - #{$gutter * 50});
+  margin: 0 auto;
+}
+
+.button {
+  width: 247px;
+  height: 50px;
+  background-color: blue;
+  text-align: center;
+  color: #fff;
+  border-radius: 25px;
+}

@@ -1,0 +1,27 @@
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  &__nav {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__contact {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

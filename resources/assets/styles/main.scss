@@ -1,10 +1,11 @@
 /** Vendors */
 
 /** Common */
+@import "./common/variables.scss";
 
 /** Import everything from autoload */
 
-@import "./autoload/**/*"
+@import "./autoload/**/*";
 
 /**
  * Import npm dependencies
@@ -18,9 +19,12 @@
 /** Import theme styles */
 
 /** Components */
+@import "./components/components.scss";
 
 /** Blocks */
+@import "./blocks/menu.scss";
 
 /** Layouts */
+@import "./layouts/header.scss";
 
 /** PAges */
