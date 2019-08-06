@@ -1,0 +1,11 @@
+.menu-item {
+  a {
+    @extend .menu-link;
+
+    color: #000;
+
+    &:hover {
+      color: color(secondary);
+    }
+  }
+}

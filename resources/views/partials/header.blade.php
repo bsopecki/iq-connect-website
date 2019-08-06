@@ -12,14 +12,12 @@
       <div class="header__contact">
         <p class="text text--minor">
         Zadzwoń 
-          <a href="#" class="link">
+          <a href="#" class="header__link">
           513 529 029
           </a>
         </p>
         <a href="#" class="button">
-          <p class="button__text">
         Kontakt.
-        </p>
         </a>
       </div>
     </div>

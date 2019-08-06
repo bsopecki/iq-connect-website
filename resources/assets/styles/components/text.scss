@@ -32,6 +32,18 @@
   }
 }
 
+.menu-link {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (14, 24));
+
+  font-weight: 300;
+
+  &--center {
+    text-align: center;
+  }
+}
+
 .text {
   @extend %text;
 

@@ -1,13 +1,15 @@
 .menu {
   list-style: none;
+  padding: 0;
 
   .menu-item {
     display: inline-flex;
     justify-content: space-around;
 
     a {
+      @include cssLock("margin-right", 360, 1920, ($gutter_num, $gutter_num * 3.75));
+
       text-decoration: none;
-      margin-right: 30px;
     }
   }
 }
