@@ -7,8 +7,8 @@
     1920,
     ($gutter_num * 0.6, $gutter_num)
   );
-  @include cssLock("top", 360, 1920, ($gutter_num * 2.5, $gutter_num));
-  @include cssLock("right", 360, 1920, ($gutter_num * 2.5, $gutter_num));
+  @include cssLock("top", 360, 767, ($gutter_num * 2.5, $gutter_num*4.5));
+  @include cssLock("right", 360, 767, ($gutter_num * 2.5, $gutter_num*4.5));
   @include cssLock("width", 360, 1920, ($gutter_num * 4, $gutter_num));
   @include cssLock("height", 360, 1920, ($gutter_num * 4, $gutter_num));
 
@@ -18,14 +18,19 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  padding: 0;
+
+  @include media(sm) {
+    display: none;
+  }
 
   &__bar {
     @include cssLock("height", 360, 1920, ($gutter_num * 0.25, $gutter_num));
 
-    width: 90%;
+    width: 100%;
     background-color: color(primary);
     position: absolute;
-    transition: 0.3s;
+    transition: 0.2s;
 
     &--first {
       top: 10%;
@@ -41,19 +46,19 @@
   }
 
   &.-is-active {
-    transform: rotate(45deg);
-
     #{$root}__bar {
       &--first {
-        transform: translateY(7.5px) rotate(90deg);
+        transform: rotate(45deg);
+        top: 50%;
       }
 
       &--second {
-        transform: translateY(-6px);
+        opacity: 0;
       }
 
       &--third {
-        transform: translateY(-18px) rotate(90deg);
+        transform: rotate(135deg);
+        top: 50%;
       }
     }
   }

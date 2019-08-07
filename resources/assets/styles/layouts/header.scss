@@ -5,9 +5,20 @@
   position: relative;
 
   &__logo {
+    @include cssLock("width", 360, 1920, ($gutter_num*4.5, $gutter_num*12.5));
+    @include cssLock("top", 360, 767, ($gutter_num*2.5, $gutter_num*4.5 ));
+    @include cssLock("left", 360, 767, ($gutter_num*2.5, $gutter_num*4.5));
+
     position: absolute;
-    top: 0;
-    left: 0;
+
+    @include media(sm) {
+      left: 0;
+      top: 0;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
   &__wrapper {
@@ -22,17 +33,26 @@
   &__nav {
     flex-grow: 1;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
+
+    @include media(xs) {
+      display: flex;
+      width: auto;
+    }
   }
 
   &__contact {
     @extend .menu-link;
 
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     color: color(gray);
+
+    @include media(xs) {
+      display: flex;
+    }
   }
 
   &__link {

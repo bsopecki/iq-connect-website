@@ -1,4 +1,4 @@
-<footer class="footer">
+{{-- <footer class="footer">
   <img class="footer__bg" src="@asset('images/footer.png')" alt="background" />
   <div class="container">
     <div class="footer__content">
@@ -34,4 +34,4 @@
         });
       });
   });
-</script>
+</script> --}}
