@@ -1,5 +1,6 @@
 $gutter: 8px;
 $gutter_num: 8;
+$transition: 0.4s;
 
 $colors: (
   primary: #215f93,
@@ -13,6 +14,6 @@ $media: (
   xs: 576px,
   sm: 768px,
   md: 992px,
-  lg: 1200px,
+  lg: 1025px,
   xl: 1440px
 );

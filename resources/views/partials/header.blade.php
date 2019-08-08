@@ -22,7 +22,7 @@
       </div>
     </div>
   </div>
-  <button class="hamburger">
+  <button class="hamburger" data-hamburger>
     <div class="hamburger__bar hamburger__bar--first"></div>
     <div class="hamburger__bar hamburger__bar--second"></div>
     <div class="hamburger__bar hamburger__bar--third"></div>

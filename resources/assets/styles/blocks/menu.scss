@@ -1,13 +1,39 @@
+.menu-iq-menu-container {
+  width: 100%;
+}
+
 .menu {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+
+  @include media(lg) {
+    flex-direction: row;
+    width: 100%;
+  }
 
   .menu-item {
+    padding: $gutter * 0.7;
     display: inline-flex;
     justify-content: space-around;
 
+    @include media(lg) {
+      padding: 0;
+    }
+
     a {
-      @include cssLock("margin-right", 360, 1920, ($gutter_num, $gutter_num * 3.75));
+      @extend .menu-link ;
+
+      @include cssLock(
+        "margin-right",
+        360,
+        1920,
+        ($gutter_num, $gutter_num * 3.75)
+      );
 
       text-decoration: none;
     }

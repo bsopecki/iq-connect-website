@@ -10,6 +10,9 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 
+//Components
+import hamburger from './components/hamburger'
+
 
 /** Populate Router instance with DOM routes */
 // eslint-disable-next-line no-unused-vars
@@ -24,7 +27,7 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => {
-  
+  hamburger.init();
 });
 
 

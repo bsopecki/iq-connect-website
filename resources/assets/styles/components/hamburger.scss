@@ -9,8 +9,8 @@
   );
   @include cssLock("top", 360, 767, ($gutter_num * 2.5, $gutter_num*4.5));
   @include cssLock("right", 360, 767, ($gutter_num * 2.5, $gutter_num*4.5));
-  @include cssLock("width", 360, 1920, ($gutter_num * 4, $gutter_num));
-  @include cssLock("height", 360, 1920, ($gutter_num * 4, $gutter_num));
+  @include cssLock("width", 360, 1920, ($gutter_num * 4, $gutter_num*4.5));
+  @include cssLock("height", 360, 1920, ($gutter_num * 4, $gutter_num*4.5));
 
   background-color: transparent;
   position: absolute;
@@ -20,7 +20,7 @@
   align-items: stretch;
   padding: 0;
 
-  @include media(sm) {
+  @include media(lg) {
     display: none;
   }
 
