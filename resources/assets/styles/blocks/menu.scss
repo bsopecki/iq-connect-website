@@ -7,9 +7,10 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   height: 100%;
+  background-color: color(light);
 
   @include media(lg) {
     flex-direction: row;

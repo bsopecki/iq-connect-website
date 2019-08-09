@@ -17,8 +17,7 @@ const toggleMenu = {
         this.$trigger.addEventListener('click', (event) =>{
             const $this = event.currentTarget;
             $this.classList.toggle(CLASS);
-            this.$elem.classList.toggle(CLASS)
-            console.log('działa');
+            this.$elem.classList.toggle(CLASS);
         });
     },
 };

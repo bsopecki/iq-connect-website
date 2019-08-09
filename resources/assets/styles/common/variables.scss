@@ -7,7 +7,7 @@ $colors: (
   secondary: #2c2a6d,
   gray: #707070,
   light-gray: #b3b2b5,
-  basic-white: #fff
+  light: #fff
 );
 
 $media: (
@@ -17,3 +17,5 @@ $media: (
   lg: 1025px,
   xl: 1440px
 );
+
+$main-font: "Work Sans";
