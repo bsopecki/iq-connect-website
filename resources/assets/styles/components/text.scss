@@ -38,9 +38,19 @@
   @include cssLock("font-size", 360, 1920, (14, 24));
 
   font-weight: 300;
+  text-decoration: none;
 
   &--center {
     text-align: center;
+  }
+
+  &--reverse {
+    color: color(special);
+    transition: $transition;
+
+    &:hover {
+      color: color(primary);
+    }
   }
 }
 
@@ -54,4 +64,10 @@
   &--center {
     text-align: center;
   }
+}
+
+.label {
+  width: 21%;
+  background-color: color(creme);
+  color: color(secondary);
 }

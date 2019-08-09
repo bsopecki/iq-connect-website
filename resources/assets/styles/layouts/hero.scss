@@ -1,0 +1,12 @@
+.hero {
+  @include cssLock("margin-top", 360, 1920, ($gutter_num * 3, $gutter_num * 7));
+
+  position: relative;
+  height: 50vh;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
