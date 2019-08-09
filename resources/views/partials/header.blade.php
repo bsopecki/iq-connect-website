@@ -1,28 +1,30 @@
-@php    
-  $phone = get_field('phone','options');
-  $mail = get_field('mail','options'); 
-
-  $sm = get_field('icons');
-@endphp
-
-<header class="header" header>
+<header class="header">
+  <a class="header__logo" href="">
+    <img src="@asset('images/LOGO.png')" alt="IQ CONNECT logo">
+  </a>
   <div class="container">
-    <div class="row">
-      <div class="col header__wrapper">
-        <a class="header__brand" href="{{ home_url('/') }}">
-          <img src="{{  get_field('logo', 'options')['url'] }}" alt="Apartamenty Juno">
+    <div class="header__wrapper">
+      <nav class="header__nav" data-nav>
+      @if (has_nav_menu('primary_navigation'))
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu']) !!}
+      @endif
+      </nav>
+      <div class="header__contact">
+        <p class="text text--minor">
+        Zadzwoń 
+          <a href="#" class="header__link">
+          513 529 029
+          </a>
+        </p>
+        <a href="#" class="button">
+        Kontakt.
         </a>
-        <button class="header__hamburger hamburger" data-toggle-menu>
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
-        </button>
-        <nav class="header__nav" data-nav>
-          @if (has_nav_menu('primary_navigation'))
-            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'header__menu']) !!}
-          @endif
-        </nav>
       </div>
     </div>
   </div>
+  <button class="hamburger" data-hamburger>
+    <div class="hamburger__bar hamburger__bar--first"></div>
+    <div class="hamburger__bar hamburger__bar--second"></div>
+    <div class="hamburger__bar hamburger__bar--third"></div>
+  </button>
 </header>

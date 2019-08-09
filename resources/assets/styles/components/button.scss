@@ -1,0 +1,24 @@
+.button {
+  @extend .subtitle;
+
+  @include cssLock("padding-top", 360, 1920, ($gutter_num, $gutter_num * 1.2));
+  @include cssLock(
+    "padding-bottom",
+    360,
+    1920,
+    ($gutter_num, $gutter_num * 1.5)
+  );
+  @include cssLock("padding-left", 360, 1920, ($gutter_num, $gutter_num * 9.25));
+  @include cssLock("padding-right", 360, 1920, ($gutter_num, $gutter_num * 9.25));
+
+  border-radius: $gutter * 3;
+  background-color: color(primary);
+  text-align: center;
+  text-decoration: none;
+  color: color(light);
+
+  &:hover {
+    background-color: color(secondary);
+    transition-duration: $transition*1.5;
+  }
+}

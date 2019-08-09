@@ -1,0 +1,85 @@
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 50vh;
+
+  @include media(lg) {
+    height: auto;
+  }
+
+  &__logo {
+    @include cssLock("width", 360, 1920, ($gutter_num*4.5, $gutter_num*12.5));
+    @include cssLock("top", 360, 767, ($gutter_num*2.5, $gutter_num*4.5 ));
+    @include cssLock("left", 360, 767, ($gutter_num*2.5, $gutter_num*4.5));
+
+    position: absolute;
+
+    @include media(lg) {
+      left: 0;
+      top: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    @include cssLock("margin-top", 360, 1920, ($gutter_num, $gutter_num * 4.5));
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    flex-grow: 1;
+    max-height: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: $transition;
+    pointer-events: none;
+
+    &.-is-active {
+      max-height: 50vh;
+      opacity: 1;
+      pointer-events: initial;
+    }
+
+    @include media(lg) {
+      display: flex;
+      max-height: unset;
+      width: auto;
+      pointer-events: initial;
+      opacity: 1;
+    }
+  }
+
+  &__contact {
+    @extend .menu-link;
+
+    height: 100%;
+    display: none;
+    align-items: center;
+    color: color(gray);
+
+    @include media(lg) {
+      display: flex;
+    }
+  }
+
+  &__link {
+    @extend .menu-link;
+
+    @include cssLock("letter-spacing", 360, 1920, ($gutter_num * 0.15, $gutter_num * 0.25));
+    @include cssLock("margin-right", 360, 1920, ($gutter_num, $gutter_num*6.5));
+
+    text-decoration: none;
+    color: color(primary);
+    font-weight: 600;
+  }
+}

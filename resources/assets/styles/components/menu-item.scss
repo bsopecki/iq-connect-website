@@ -1,0 +1,12 @@
+.menu-item {
+  a {
+    @extend .menu-link;
+
+    color: #000;
+    transition: $transition;
+
+    &:hover {
+      color: color(secondary);
+    }
+  }
+}

@@ -1,4 +1,4 @@
-<form class="form" id="form" action="https://apartamentyjuno.pl/mail.php" method="POST">
+{{-- <form class="form" id="form" action="https://apartamentyjuno.pl/mail.php" method="POST">
   <!-- form__row -->
   <div class="form__row">
     <div class="form__col">
@@ -42,4 +42,4 @@
       </button>
     </div>
   </div>
-</form>
+</form> --}}
