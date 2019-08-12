@@ -1,11 +1,13 @@
 <section class="hero">
-    <img class="hero__image" src="@asset('images/holger-link-748973-unsplash.png')" alt="hero background">
+   <figure class="hero__image">
+    <img src="@asset('images/holger-link-748973-unsplash.png')" alt="hero background">
+</figure>
     <div class="container">
         <div class="hero__content">
             <header class="hero__header">
-                <h2 class="headline">
-                    <span class="label">
-                        iq connect
+                <h2 class="hero__slogan">
+                    <span class="hero__slogan--label">
+                        IQ Connect
                     </span>
                     od pomysłu
                     <br>
@@ -13,7 +15,7 @@
                 </h2>
             </header>
             <div class="hero__description">
-                <p class="text">
+                <p class="hero__desc">
                     Jesteśmy doświadczoną multiagencją działającą w branżach związanych z IT, mediami i Public Relations
                 </p>
             </div>
@@ -21,7 +23,7 @@
                 <a class="hero__button button">
                     Więcej o nas
                 </a>
-                <a href="" class="hero__link menu-link menu-link--reverse">
+                <a href="#" class="hero__link menu-link menu-link--reverse">
                     Zobacz film
                 </a>
             </footer>

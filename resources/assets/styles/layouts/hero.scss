@@ -1,12 +1,107 @@
 .hero {
-  @include cssLock("margin-top", 360, 1920, ($gutter_num * 3, $gutter_num * 7));
+  @include cssLock("margin-top", 360, 1920, ($gutter_num * 7, $gutter_num * 8));
 
   position: relative;
-  height: 50vh;
 
   &__image {
     position: absolute;
     top: 0;
     left: 0;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+  }
+
+  &__slogan {
+    @extend .headline;
+
+    @include cssLock("padding-top", 360, 1920, ($gutter_num, $gutter_num * 19));
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      ($gutter_num, $gutter_num * 6.25)
+    );
+
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: color(primary);
+  }
+
+  &__slogan--label {
+    @extend .subtitle;
+
+    @include cssLock("padding-left", 360, 1920, ($gutter_num, $gutter_num * 2));
+    @include cssLock(
+      "padding-right",
+      360,
+      1920,
+      ($gutter_num, $gutter_num * 2)
+    );
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num, $gutter_num * 1.7)
+    );
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num, $gutter_num * 1.7)
+    );
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      ($gutter_num, $gutter_num * 1.7)
+    );
+    @include cssLock("width", 360, 1920, ($gutter_num * 10, $gutter_num * 17));
+
+    display: block;
+    background-color: color(special);
+    color: color(secondary);
+    text-transform: none;
+  }
+
+  &__description {
+    @include cssLock(
+      "margin-top",
+      360,
+      1920,
+      ($gutter_num * 1.7, $gutter_num * 6.25)
+    );
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      ($gutter_num * 1.7, $gutter_num * 6.25)
+    );
+
+    width: 50%;
+  }
+
+  &__desc {
+    @extend .text;
+
+    @include cssLock(
+      "letter-spacing",
+      360,
+      1920,
+      ($gutter_num * 0.2, $gutter_num * 0.125)
+    );
+
+    color: color(gray);
+  }
+
+  &__button {
+    @include cssLock(
+      "margin-right",
+      360,
+      1920,
+      ($gutter_num * 2.5, $gutter_num * 3.8)
+    );
   }
 }
