@@ -1,5 +1,5 @@
 .container {
-  width: calc(100% - #{$gutter * 12.5});
+  width: calc(100% - #{$gutter * 5});
   margin: 0 auto;
 
   @include media(xl) {
