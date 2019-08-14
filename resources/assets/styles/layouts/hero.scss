@@ -53,6 +53,7 @@
 
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     text-transform: uppercase;
     color: color(primary);
   }
@@ -85,9 +86,8 @@
       1920,
       ($gutter_num, $gutter_num * 1.7)
     );
-    @include cssLock("width", 360, 1920, ($gutter_num * 10, $gutter_num * 17));
 
-    display: block;
+    display: inline-block;
     background-color: color(special);
     color: color(secondary);
     text-transform: none;
@@ -107,8 +107,6 @@
       ($gutter_num * 2.5, $gutter_num * 6.25)
     );
 
-    width: 80%;
-
     @include media(xl) {
       @include cssLock(
         "padding-bottom",
@@ -117,7 +115,7 @@
         ($gutter_num * 2, $gutter_num * 2.5)
       );
 
-      width: 50%;
+      max-width: 50%;
     }
   }
 

@@ -5,7 +5,7 @@
     $alt = $data['alt'];
 @endphp
 
-<div class="hero__overlay"></div>
+    <div class="hero__overlay"></div>
     <img class="hero__image" src=@asset($photo) alt={{$alt}}>
     <div class="container">
         <div class="hero__content">
@@ -32,3 +32,4 @@
             </footer>
         </div>
   </div>
+  

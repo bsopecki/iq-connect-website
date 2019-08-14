@@ -1,8 +1,5 @@
 const Flickity = require('flickity');
 const CONFIG = {
-    TRIGGER: 'dot',
-    ELEM: 'hero__cell',
-    CLASS:'-is-selected',
     WRAPPER: '.hero',
 };
 
