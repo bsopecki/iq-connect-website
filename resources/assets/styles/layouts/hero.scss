@@ -15,8 +15,6 @@
   }
 
   &__overlay {
-    @include cssLock("max-height", 360, 1920, ($gutter_num * 50, $gutter_num *100));
-
     position: absolute;
     left: 0;
     top: 0;
@@ -28,14 +26,13 @@
   }
 
   &__image {
-    @include cssLock("max-height", 360, 1920, ($gutter_num * 50, $gutter_num *100));
-
     position: absolute;
     width: 100%;
     padding: 0;
     margin: 0;
     z-index: -2;
     object-fit: cover;
+    height: 100%;
   }
 
   &__content {
@@ -57,7 +54,6 @@
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
-    font-weight: 900;
     color: color(primary);
   }
 
@@ -145,7 +141,6 @@
 
   .flickity-page-dots {
     @include cssLock("bottom", 360, 1920, ($gutter_num * 1, $gutter_num * 2.5));
-    @include cssLock("left", 360, 1920, ($gutter_num * 1, $gutter_num * 110));
     @include cssLock("width", 360, 1920, ($gutter_num * 1, $gutter_num * 15));
     @include cssLock("height", 360, 1920, ($gutter_num * 1, $gutter_num * 3));
 
@@ -155,6 +150,9 @@
 
     @include media(xl) {
       display: block;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 

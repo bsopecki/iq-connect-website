@@ -14,7 +14,7 @@
                     <span class="hero__label">
                         {{$label}}
                     </span>
-                    {{ $title }}
+                    {!! $title !!}
                 </h2>
             </header>
             <div class="hero__description">

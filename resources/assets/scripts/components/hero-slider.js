@@ -15,7 +15,7 @@ const flickity = {
             contain: true,
             prevNextButtons: false,
             pageDots: true,
-            autoPlay: true,
+            autoPlay: false,
           });
     },
 };

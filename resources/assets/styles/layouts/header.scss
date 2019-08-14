@@ -40,13 +40,19 @@
     display: flex;
     align-items: center;
     opacity: 0;
-    transition: $transition;
     pointer-events: none;
 
     &.-is-active {
+      @include cssLock("top", 360, 1920, ($gutter_num*7, $gutter_num));
+
       max-height: 50vh;
+      width: 100%;
+      left: 0;
       opacity: 1;
       pointer-events: initial;
+      position: absolute;
+      z-index: 1;
+      transition: $transition;
     }
 
     @include media(lg) {
