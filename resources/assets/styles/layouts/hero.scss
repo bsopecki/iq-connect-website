@@ -1,11 +1,26 @@
 .hero {
-  @include cssLock("margin-top", 360, 1920, ($gutter_num * 7.8, $gutter_num * 8));
-  @include cssLock("max-height", 360, 1920, ($gutter_num * 50, $gutter_num *100));
+  @include cssLock(
+    "margin-top",
+    360,
+    1920,
+    ($gutter_num * 7.8, $gutter_num * 8)
+  );
+  @include cssLock(
+    "max-height",
+    360,
+    1920,
+    ($gutter_num * 50, $gutter_num * 100)
+  );
 
   position: relative;
 
   .flickity-viewport {
-    @include cssLock("max-height", 360, 1920, ($gutter_num * 50, $gutter_num *100));
+    @include cssLock(
+      "max-height",
+      360,
+      1920,
+      ($gutter_num * 50, $gutter_num * 100)
+    );
   }
 
   &__cell {
@@ -36,14 +51,29 @@
   }
 
   &__content {
-    @include cssLock("padding-top", 360, 1920, ($gutter_num * 7.8, $gutter_num * 8));
-    @include cssLock("padding-bottom", 360, 1920, ($gutter_num * 7.8, $gutter_num * 8));
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 7.8, $gutter_num * 8)
+    );
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num * 7.8, $gutter_num * 8)
+    );
   }
 
   &__slogan {
     @extend .headline;
 
-    @include cssLock("padding-top", 360, 1920, ($gutter_num*6, $gutter_num * 19));
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 6, $gutter_num * 19)
+    );
     @include cssLock(
       "margin-bottom",
       360,
@@ -107,6 +137,8 @@
       ($gutter_num * 2.5, $gutter_num * 6.25)
     );
 
+    width: 100%;
+
     @include media(xl) {
       @include cssLock(
         "padding-bottom",
@@ -115,26 +147,51 @@
         ($gutter_num * 2, $gutter_num * 2.5)
       );
 
-      max-width: 50%;
+      max-width: $gutter*75;
     }
   }
 
   &__desc {
     @extend .text;
 
-    @include cssLock("letter-spacing", 360, 1920, ($gutter_num * 0.2, $gutter_num * 0.125));
+    @include cssLock(
+      "letter-spacing",
+      360,
+      1920,
+      ($gutter_num * 0.2, $gutter_num * 0.125)
+    );
 
     color: color(light);
   }
 
   &__button {
-    @include cssLock("margin-right", 360, 1920, ($gutter_num * 2.5, $gutter_num * 3.8));
-    @include cssLock("padding-right", 360, 1920, ($gutter_num * 2.5, $gutter_num * 3.8));
-    @include cssLock("padding-left", 360, 1920, ($gutter_num * 2.5, $gutter_num * 3.8));
+    @include cssLock(
+      "margin-right",
+      360,
+      1920,
+      ($gutter_num * 2.5, $gutter_num * 3.8)
+    );
+    @include cssLock(
+      "padding-right",
+      360,
+      1920,
+      ($gutter_num * 2.5, $gutter_num * 3.8)
+    );
+    @include cssLock(
+      "padding-left",
+      360,
+      1920,
+      ($gutter_num * 2.5, $gutter_num * 3.8)
+    );
   }
 
   &__cta {
-    @include cssLock("padding-bottom", 360, 1920, ($gutter_num * 7, $gutter_num * 12));
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num * 7, $gutter_num * 12)
+    );
   }
 
   .flickity-page-dots {
