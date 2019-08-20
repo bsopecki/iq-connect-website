@@ -18,6 +18,10 @@
   @include cssLock("font-size", 360, 1920, (18, 52));
 
   font-weight: 600;
+
+  &--upper {
+    text-transform: uppercase;
+  }
 }
 
 .subtitle {
@@ -50,6 +54,15 @@
 
     &:hover {
       color: color(primary);
+    }
+  }
+
+  &--more {
+    color: color(primary);
+
+    &:hover {
+      color: color(dark);
+      transition: $transition;
     }
   }
 }

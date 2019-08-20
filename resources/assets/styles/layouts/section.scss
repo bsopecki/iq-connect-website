@@ -1,0 +1,67 @@
+.section {
+  @include cssLock(
+    "margin-top",
+    360,
+    1920,
+    ($gutter_num * 3, $gutter_num * 7.5)
+  );
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @extend .title;
+
+    color: color(primary);
+  }
+
+  &__subtitle {
+    @extend .subtitle;
+
+    @include cssLock(
+      "padding-left",
+      360,
+      1920,
+      ($gutter_num * 6, $gutter_num * 21)
+    );
+    @include cssLock(
+      "padding-right",
+      360,
+      1920,
+      ($gutter_num * 6, $gutter_num * 21)
+    );
+  }
+
+  &__content {
+    @extend .text;
+
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 2, $gutter_num * 3)
+    );
+
+    width: 100%;
+
+    @include media(xl) {
+      max-width: $gutter * 80;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+
+    @include cssLock(
+      "margin-top",
+      360,
+      1920,
+      ($gutter_num * 6, $gutter_num * 11.5)
+    );
+  }
+}
