@@ -6,6 +6,8 @@
 
   @section('content')
 
+  @include('layouts.components.hero')
+
   {{-- @php $sections = get_field('components') @endphp
   
   @if($sections)

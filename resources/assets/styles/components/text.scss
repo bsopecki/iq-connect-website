@@ -9,7 +9,7 @@
 
   @include cssLock("font-size", 360, 1920, (24, 72));
 
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .title {
@@ -38,9 +38,19 @@
   @include cssLock("font-size", 360, 1920, (14, 24));
 
   font-weight: 300;
+  text-decoration: none;
 
   &--center {
     text-align: center;
+  }
+
+  &--reverse {
+    color: color(special);
+    transition: $transition;
+
+    &:hover {
+      color: color(primary);
+    }
   }
 }
 
@@ -50,6 +60,7 @@
   @include cssLock("font-size", 360, 1920, (12, 20));
 
   font-weight: 300;
+  line-height: 2;
 
   &--center {
     text-align: center;
