@@ -15,7 +15,7 @@
 .title {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (18, 52));
+  @include cssLock("font-size", 360, 1920, (22, 52));
 
   font-weight: 600;
 
@@ -56,15 +56,6 @@
       color: color(primary);
     }
   }
-
-  &--more {
-    color: color(primary);
-
-    &:hover {
-      color: color(dark);
-      transition: $transition;
-    }
-  }
 }
 
 .text {
@@ -77,5 +68,14 @@
 
   &--center {
     text-align: center;
+  }
+
+  &--more {
+    color: color(primary);
+
+    &:hover {
+      color: color(dark);
+      transition: $transition;
+    }
   }
 }

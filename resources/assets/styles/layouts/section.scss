@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 70%;
+    max-width: $gutter * 70;
     margin: 0 auto;
   }
 
@@ -27,7 +27,7 @@
       "padding-left",
       360,
       1920,
-      ($gutter_num * 6, $gutter_num * 21)
+      ($gutter_num * 8.5, $gutter_num * 21)
     );
     @include cssLock(
       "padding-right",
@@ -38,7 +38,7 @@
   }
 
   &__content {
-    @extend .text;
+    @extend .subtitle;
 
     @include cssLock(
       "padding-top",
@@ -48,9 +48,19 @@
     );
 
     width: 100%;
+    font-weight: 300;
+    color: color(gray);
 
     @include media(xl) {
       max-width: $gutter * 80;
+    }
+
+    br {
+      display: none;
+
+      @include media(xl) {
+        display: block;
+      }
     }
   }
 
