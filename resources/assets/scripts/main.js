@@ -11,7 +11,8 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 
 //Components
-import hamburger from './components/hamburger'
+import hamburger from './components/hamburger';
+import flickity from './components/hero-slider';
 
 
 /** Populate Router instance with DOM routes */
@@ -28,6 +29,7 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => {
   hamburger.init();
+  flickity.init();
 });
 
 

@@ -3,16 +3,20 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  height: 50vh;
 
   @include media(lg) {
     height: auto;
   }
 
   &__logo {
-    @include cssLock("width", 360, 1920, ($gutter_num*4.5, $gutter_num*12.5));
-    @include cssLock("top", 360, 767, ($gutter_num*2.5, $gutter_num*4.5 ));
-    @include cssLock("left", 360, 767, ($gutter_num*2.5, $gutter_num*4.5));
+    @include cssLock(
+      "width",
+      360,
+      1920,
+      ($gutter_num * 4.5, $gutter_num * 12.5)
+    );
+    @include cssLock("top", 360, 767, ($gutter_num * 2.5, $gutter_num * 4.5));
+    @include cssLock("left", 360, 767, ($gutter_num * 2.5, $gutter_num * 4.5));
 
     position: absolute;
 
@@ -36,16 +40,22 @@
   }
 
   &__nav {
+    @include cssLock("top", 360, 1920, ($gutter_num * 7, $gutter_num));
+
     flex-grow: 1;
     max-height: 0;
     display: flex;
     align-items: center;
     opacity: 0;
-    transition: $transition;
     pointer-events: none;
+    width: 100%;
+    left: 0;
+    transition: $transition;
+    position: absolute;
+    z-index: 1;
 
     &.-is-active {
-      max-height: 50vh;
+      max-height: 75vh;
       opacity: 1;
       pointer-events: initial;
     }
@@ -56,6 +66,7 @@
       width: auto;
       pointer-events: initial;
       opacity: 1;
+      position: relative;
     }
   }
 
@@ -75,8 +86,18 @@
   &__link {
     @extend .menu-link;
 
-    @include cssLock("letter-spacing", 360, 1920, ($gutter_num * 0.15, $gutter_num * 0.25));
-    @include cssLock("margin-right", 360, 1920, ($gutter_num, $gutter_num*6.5));
+    @include cssLock(
+      "letter-spacing",
+      360,
+      1920,
+      ($gutter_num * 0.15, $gutter_num * 0.25)
+    );
+    @include cssLock(
+      "margin-right",
+      360,
+      1920,
+      ($gutter_num, $gutter_num * 6.5)
+    );
 
     text-decoration: none;
     color: color(primary);
