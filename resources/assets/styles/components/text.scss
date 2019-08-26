@@ -9,15 +9,19 @@
 
   @include cssLock("font-size", 360, 1920, (24, 72));
 
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .title {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (18, 52));
+  @include cssLock("font-size", 360, 1920, (22, 52));
 
   font-weight: 600;
+
+  &--upper {
+    text-transform: uppercase;
+  }
 }
 
 .subtitle {
@@ -38,9 +42,19 @@
   @include cssLock("font-size", 360, 1920, (14, 24));
 
   font-weight: 300;
+  text-decoration: none;
 
   &--center {
     text-align: center;
+  }
+
+  &--reverse {
+    color: color(special);
+    transition: $transition;
+
+    &:hover {
+      color: color(primary);
+    }
   }
 }
 
@@ -50,8 +64,18 @@
   @include cssLock("font-size", 360, 1920, (12, 20));
 
   font-weight: 300;
+  line-height: 2;
 
   &--center {
     text-align: center;
+  }
+
+  &--more {
+    color: color(primary);
+
+    &:hover {
+      color: color(dark);
+      transition: $transition;
+    }
   }
 }
