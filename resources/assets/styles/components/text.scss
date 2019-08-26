@@ -78,4 +78,14 @@
       transition: $transition;
     }
   }
+
+  &--special {
+    text-decoration: none;
+    color: color(primary);
+
+    &:hover {
+      color: color(dark);
+      transition: $transition;
+    }
+  }
 }

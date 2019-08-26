@@ -5,6 +5,18 @@
     1920,
     ($gutter_num * 5, $gutter_num * 12.5)
   );
+  @include cssLock(
+    "margin-bottom",
+    360,
+    1920,
+    ($gutter_num * 5, $gutter_num * 12.5)
+  );
+  @include cssLock(
+    "padding",
+    360,
+    1920,
+    ($gutter_num, $gutter_num * 12.5)
+  );
 
   &__wrapper {
     @include cssLock(

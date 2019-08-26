@@ -10,6 +10,7 @@
   @include('layouts.components.about-us')
   @include('layouts.components.blog')
   @include('layouts.components.contact-section')
+  @include('layouts.components.footer')
 
   {{-- @php $sections = get_field('components') @endphp
   
