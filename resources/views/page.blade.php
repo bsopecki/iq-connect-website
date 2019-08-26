@@ -8,6 +8,7 @@
 
   @include('layouts.components.hero')
   @include('layouts.components.about-us')
+  @include('layouts.components.blog')
 
   {{-- @php $sections = get_field('components') @endphp
   

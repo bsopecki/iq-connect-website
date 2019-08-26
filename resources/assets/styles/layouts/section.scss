@@ -18,6 +18,7 @@
     @extend .title;
 
     color: color(primary);
+    font-weight: 400;
   }
 
   &__subtitle {
@@ -35,6 +36,8 @@
       1920,
       ($gutter_num * 6, $gutter_num * 21)
     );
+
+    font-weight: 400;
   }
 
   &__content {
@@ -52,15 +55,7 @@
     color: color(gray);
 
     @include media(xl) {
-      max-width: $gutter * 80;
-    }
-
-    br {
-      display: none;
-
-      @include media(xl) {
-        display: block;
-      }
+      width: $gutter * 82;
     }
   }
 

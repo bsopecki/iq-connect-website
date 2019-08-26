@@ -9,7 +9,7 @@
               looking forward
             </h2>
             <p class="section__content text--center">
-                Podejmujemy ciekawe wyzwania, za każdym razem biorąc pod uwagę oczekiwania i potrzeby naszych klientów.<br>Sprawdźcie szczegóły naszej bogatej oferty usług.
+                Podejmujemy ciekawe wyzwania, za każdym razem biorąc pod uwagę oczekiwania i potrzeby naszych klientów. Sprawdźcie szczegóły naszej bogatej oferty usług.
             </p>
         </header>
         <div class="section__wrapper">
