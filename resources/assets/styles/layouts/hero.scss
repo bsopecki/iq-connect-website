@@ -1,0 +1,224 @@
+.hero {
+  @include cssLock(
+    "margin-top",
+    360,
+    1920,
+    ($gutter_num * 7.8, $gutter_num * 8)
+  );
+  @include cssLock(
+    "max-height",
+    360,
+    1920,
+    ($gutter_num * 50, $gutter_num * 100)
+  );
+
+  position: relative;
+
+  .flickity-viewport {
+    @include cssLock(
+      "max-height",
+      360,
+      1920,
+      ($gutter_num * 50, $gutter_num * 100)
+    );
+  }
+
+  &__cell {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: color(primary);
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: -2;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &__content {
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 7.8, $gutter_num * 8)
+    );
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num * 7.8, $gutter_num * 8)
+    );
+  }
+
+  &__slogan {
+    @extend .headline;
+
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 6, $gutter_num * 19)
+    );
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      ($gutter_num, $gutter_num * 4)
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-transform: uppercase;
+    color: color(primary);
+  }
+
+  &__label {
+    @extend .subtitle;
+
+    @include cssLock("padding-left", 360, 1920, ($gutter_num, $gutter_num * 2));
+    @include cssLock(
+      "padding-right",
+      360,
+      1920,
+      ($gutter_num, $gutter_num * 2)
+    );
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num, $gutter_num * 1.7)
+    );
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num, $gutter_num * 1.7)
+    );
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      ($gutter_num, $gutter_num * 1.7)
+    );
+
+    display: inline-block;
+    background-color: color(special);
+    color: color(secondary);
+    text-transform: none;
+  }
+
+  &__description {
+    @include cssLock(
+      "margin-top",
+      360,
+      1920,
+      ($gutter_num * 1.7, $gutter_num * 6.25)
+    );
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      ($gutter_num * 2.5, $gutter_num * 6.25)
+    );
+
+    width: 100%;
+
+    @include media(xl) {
+      @include cssLock(
+        "padding-bottom",
+        360,
+        1920,
+        ($gutter_num * 2, $gutter_num * 2.5)
+      );
+
+      max-width: $gutter*75;
+    }
+  }
+
+  &__desc {
+    @extend .text;
+
+    @include cssLock(
+      "letter-spacing",
+      360,
+      1920,
+      ($gutter_num * 0.2, $gutter_num * 0.125)
+    );
+
+    color: color(light);
+  }
+
+  &__button {
+    @include cssLock(
+      "margin-right",
+      360,
+      1920,
+      ($gutter_num * 2.5, $gutter_num * 3.8)
+    );
+    @include cssLock(
+      "padding-right",
+      360,
+      1920,
+      ($gutter_num * 2.5, $gutter_num * 3.8)
+    );
+    @include cssLock(
+      "padding-left",
+      360,
+      1920,
+      ($gutter_num * 2.5, $gutter_num * 3.8)
+    );
+  }
+
+  &__cta {
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num * 7, $gutter_num * 12)
+    );
+  }
+
+  .flickity-page-dots {
+    @include cssLock("bottom", 360, 1920, ($gutter_num * 1, $gutter_num * 2.5));
+    @include cssLock("width", 360, 1920, ($gutter_num * 1, $gutter_num * 15));
+    @include cssLock("height", 360, 1920, ($gutter_num * 1, $gutter_num * 3));
+
+    position: absolute;
+    background-color: transparent;
+    display: none;
+
+    @include media(xl) {
+      display: block;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .dot {
+    @include cssLock("width", 360, 1920, ($gutter_num * 1, $gutter_num * 2));
+    @include cssLock("height", 360, 1920, ($gutter_num * 1, $gutter_num * 2));
+
+    background-color: color(light);
+
+    &:hover {
+      background-color: color(dark);
+    }
+  }
+}
