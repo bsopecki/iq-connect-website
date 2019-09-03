@@ -62,8 +62,8 @@
 
     @include media(lg) {
       display: flex;
-      max-height: unset;
       width: auto;
+      max-height: unset;
       pointer-events: initial;
       opacity: 1;
       position: relative;

@@ -52,6 +52,10 @@ add_action('after_setup_theme', function () {
         'footer_navigation' => __('Footer Navigation', 'sage')
     ]);
 
+    register_nav_menus([
+        'realizations_navigation' => __('Realizations Navigation', 'sage')
+    ]);
+
     /**
      * Enable post thumbnails
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
