@@ -1,13 +1,14 @@
 <section class="realizations">
-    <header class="realizations__header">
-        <h1 class="realizations__title">
-            creativeroom
-            <span class="realizations__subtitle">
-                nasze realizacje
-            </span>
-        </h1>
-    </header>
-    <div class="container">
+        <header class="realizations__header">
+            <h1 class="realizations__title">
+                creativeroom
+                <br>
+                <span class="realizations__text">
+                    nasze realizacje
+                </span>
+            </h1>
+        </header>
+        <div class="container">
         <nav class="realizations__nav">
             @if (has_nav_menu('realizations_navigation'))
             {!! wp_nav_menu(['theme_location' => 'realizations_navigation', 'menu_class' => 'realizations-menu']) !!}
@@ -16,9 +17,9 @@
     </div>
     <div class="realizations__wrapper">
         <div class="realizations__content">
-            <img src="" alt="" class="realizations__photo">
-            <div class="realizations__decription">
-                <h2 class="realizations__title">
+            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
+            <div class="realizations__description">
+                <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
@@ -27,9 +28,9 @@
             </div>
         </div>
         <div class="realizations__content">
-            <img src="" alt="" class="realizations__photo">
-            <div class="realizations__decription">
-                <h2 class="realizations__title">
+            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
+            <div class="realizations__description">
+                <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
@@ -38,9 +39,9 @@
             </div>
         </div>
         <div class="realizations__content">
-            <img src="" alt="" class="realizations__photo">
-            <div class="realizations__decription">
-                <h2 class="realizations__title">
+            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
+            <div class="realizations__description">
+                <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
@@ -49,9 +50,9 @@
             </div>
         </div>
         <div class="realizations__content">
-            <img src="" alt="" class="realizations__photo">
-            <div class="realizations__decription">
-                <h2 class="realizations__title">
+            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
+            <div class="realizations__description">
+                <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
@@ -60,9 +61,9 @@
             </div>
         </div>
         <div class="realizations__content">
-            <img src="" alt="" class="realizations__photo">
-            <div class="realizations__decription">
-                <h2 class="realizations__title">
+            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
+            <div class="realizations__description">
+                <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
@@ -71,9 +72,9 @@
             </div>
         </div>
         <div class="realizations__content">
-            <img src="" alt="" class="realizations__photo">
-            <div class="realizations__decription">
-                <h2 class="realizations__title">
+            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
+            <div class="realizations__description">
+                <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
@@ -82,35 +83,13 @@
             </div>
         </div>
         <div class="realizations__content">
-            <img src="" alt="" class="realizations__photo">
-            <div class="realizations__decription">
-                <h2 class="realizations__title">
+            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
+            <div class="realizations__description">
+                <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae, quos in aperiam ipsa dolorum ad sequi modi provident itaque nostrum possimus, vel doloremque ab reprehenderit dicta? Doloribus, autem enim.
-                </p>
-            </div>
-        </div>
-        <div class="realizations__content">
-            <img src="" alt="" class="realizations__photo">
-            <div class="realizations__decription">
-                <h2 class="realizations__title">
-                    Project name
-                </h2>
-                <p class="realizations__desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eaque quibusdam earum aperiam, quia repellendus nesciunt ipsam sapiente corporis, nihil, ipsa laborum sunt error facere labore nostrum! Aliquam, maiores! Magnam.
-                </p>
-            </div>
-        </div>
-        <div class="realizations__content">
-            <img src="" alt="" class="realizations__photo">
-            <div class="realizations__decription">
-                <h2 class="realizations__title">
-                    Project name
-                </h2>
-                <p class="realizations__desc">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id iste harum asperiores at earum dolorum, explicabo voluptatum eius voluptates aut et ratione. Facere et iure voluptates nemo cumque nostrum? Consectetur!
                 </p>
             </div>
         </div>

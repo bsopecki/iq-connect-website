@@ -1,5 +1,130 @@
 .realizations {
   @include cssLock("margin-top", 360, 1920, ($gutter_num * 4, $gutter_num * 6));
 
-  background-color: red;
+  &__header {
+    @include cssLock(
+      "padding-top",
+      360,
+      1920,
+      ($gutter_num * 4, $gutter_num * 9)
+    );
+
+    text-align: center;
+  }
+
+  &__title {
+    @include cssLock(
+      "font-size",
+      360,
+      1920,
+      ($gutter_num * 5, $gutter_num * 18)
+    );
+
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 0.9;
+    background: url("../../images/daniel-korpai-1302051-unsplash.png") center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  &__text {
+    @extend .headline;
+
+    background-color: color(primary);
+    -webkit-background-clip: text;
+  }
+
+  .realizations-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .menu-item {
+      @include cssLock(
+        "padding-left",
+        360,
+        1920,
+        ($gutter_num * 1.25, $gutter_num * 2.5)
+      );
+      @include cssLock(
+        "padding-right",
+        360,
+        1920,
+        ($gutter_num * 1.25, $gutter_num * 2.5)
+      );
+      @include cssLock(
+        "padding-top",
+        360,
+        1920,
+        ($gutter_num * 0.375, $gutter_num * 0.75)
+      );
+      @include cssLock(
+        "padding-bottom",
+        360,
+        1920,
+        ($gutter_num * 0.375, $gutter_num * 0.75)
+      );
+
+      background-color: color(special);
+      margin: $gutter;
+
+      &:hover {
+        background-color: color(primary);
+        transition: $transition;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+        color: color(secondary);
+
+        &:hover {
+          color: color(light);
+          transition: $transition;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    @include cssLock(
+      "padding",
+      360,
+      1920,
+      ($gutter_num * 2.5, $gutter_num * 5)
+    );
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $gutter * 2;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__content:nth-child(4) {
+    grid-column: 2 span;
+  }
+
+  &__content:nth-child(7) {
+    grid-column: 2 span;
+  }
+
+  &__photo {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__description {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
 }
