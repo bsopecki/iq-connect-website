@@ -59,7 +59,7 @@
                 <h2 class="realizations__subtitle">
                     Project name
                 </h2>
-                <p class="realizations__desc">
+                <p class="realizations__desc--right">
                         Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
                 </p>
             </div>
@@ -95,7 +95,7 @@
                 <h2 class="realizations__subtitle">
                     Project name
                 </h2>
-                <p class="realizations__desc">
+                <p class="realizations__desc--right">
                         Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
                 </p>
             </div>
