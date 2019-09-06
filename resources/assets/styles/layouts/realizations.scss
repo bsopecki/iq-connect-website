@@ -42,6 +42,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0;
 
     .menu-item {
       @include cssLock(
@@ -100,31 +101,110 @@
     );
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: $gutter * 2;
+
+    @include media(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &__content {
+    @include cssLock("height", 360, 1920, ($gutter_num * 30, $gutter_num * 45));
+
     position: relative;
   }
 
   &__content:nth-child(4) {
-    grid-column: 2 span;
+    @include media(lg) {
+      grid-column: 2 span;
+    }
   }
 
   &__content:nth-child(7) {
-    grid-column: 2 span;
+    @include media(lg) {
+      grid-column: 2 span;
+    }
   }
 
   &__photo {
     width: 100%;
     object-fit: cover;
+    position: absolute;
+    height: 100%;
+  }
+
+  &__overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: color(primary);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+
+    @include media(lg) {
+      display: block;
+    }
   }
 
   &__description {
+    @include cssLock(
+      "max-height",
+      360,
+      1920,
+      ($gutter_num * 26, $gutter_num * 41)
+    );
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
     position: absolute;
-    width: 100%;
+    top: 0;
+    left: 0;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
+    z-index: 1;
+    padding: $gutter * 2;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include media(lg) {
+      z-index: 0;
+      opacity: 0;
+    }
+  }
+
+  &__subtitle {
+    @include cssLock(
+      "margin-left",
+      360,
+      1920,
+      ($gutter_num * 4, $gutter_num * 4)
+    );
+
+    color: color(light);
+
+    @include media(lg) {
+      color: color(light);
+    }
+  }
+
+  &__desc {
+    @extend .text;
+
+    display: none;
+    color: color(light);
+
+    @include media(lg) {
+      margin-left: $gutter * 4;
+      line-height: 1.5;
+      margin-right: $gutter * 19;
+      display: block;
+    }
   }
 }

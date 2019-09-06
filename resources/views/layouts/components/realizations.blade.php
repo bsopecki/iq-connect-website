@@ -19,77 +19,84 @@
         <div class="realizations__content">
             <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
             <div class="realizations__description">
+            <div class="realizations__overlay"></div>
                 <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quam voluptatum at deserunt quia? Deleniti aliquid voluptatibus tempore dicta eos, porro laboriosam, vitae voluptatem repudiandae modi placeat ipsa non labore.
+                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
                 </p>
             </div>
         </div>
         <div class="realizations__content">
             <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
             <div class="realizations__description">
+            <div class="realizations__overlay"></div>
                 <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid maxime quas similique nihil, incidunt rerum qui cumque quibusdam blanditiis esse ducimus repudiandae quam iste recusandae perferendis culpa dolore neque hic.
+                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
                 </p>
             </div>
         </div>
         <div class="realizations__content">
             <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
             <div class="realizations__description">
+            <div class="realizations__overlay"></div>
                 <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ipsam! Illum suscipit repellendus dolorem mollitia ipsam temporibus atque ipsa impedit placeat fuga animi quae qui at, neque eos voluptates quam.
+                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
                 </p>
             </div>
         </div>
         <div class="realizations__content">
             <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
             <div class="realizations__description">
+            <div class="realizations__overlay"></div>
                 <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, enim neque voluptates voluptatem maiores culpa error eos laboriosam sunt exercitationem? Deserunt ad, velit vel labore libero dicta expedita ipsum recusandae.
+                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
                 </p>
             </div>
         </div>
         <div class="realizations__content">
             <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
             <div class="realizations__description">
+            <div class="realizations__overlay"></div>
                 <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure mollitia earum itaque sed facilis possimus accusamus explicabo, illo voluptatibus fuga voluptatem quos culpa aperiam. Ipsam dolorem sint tempora alias culpa?
+                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
                 </p>
             </div>
         </div>
         <div class="realizations__content">
             <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
             <div class="realizations__description">
+            <div class="realizations__overlay"></div>
                 <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et saepe illo officiis atque magnam, autem excepturi perferendis iste architecto dicta beatae cupiditate quo eius. Neque ducimus sit earum laudantium nobis.
+                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
                 </p>
             </div>
         </div>
         <div class="realizations__content">
             <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
             <div class="realizations__description">
+            <div class="realizations__overlay"></div>
                 <h2 class="realizations__subtitle">
                     Project name
                 </h2>
                 <p class="realizations__desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae, quos in aperiam ipsa dolorum ad sequi modi provident itaque nostrum possimus, vel doloremque ab reprehenderit dicta? Doloribus, autem enim.
+                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
                 </p>
             </div>
         </div>
