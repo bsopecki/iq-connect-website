@@ -75,7 +75,7 @@
 
       &:hover {
         background-color: color(primary);
-        transition: $transition;
+        transition: $transition*1.5;
       }
 
       a {
@@ -86,7 +86,7 @@
 
         &:hover {
           color: color(light);
-          transition: $transition;
+          transition: $transition*1.5;
         }
       }
     }
@@ -172,6 +172,7 @@
 
     &:hover {
       opacity: 1;
+      transition: $transition;
     }
 
     @include media(lg) {
@@ -204,18 +205,23 @@
 
     @include media(lg) {
       margin-left: $gutter * 4;
-      line-height: 1.5;
       margin-right: $gutter * 19;
+      margin-bottom: $gutter*5;
       display: block;
+      line-height: 1.5;
     }
 
     &--right {
       @extend .text;
 
+      display: none;
+
       @include media(lg) {
         margin-right: $gutter * 95;
-        color: color(light);
         margin-left: $gutter * 4;
+        margin-bottom: $gutter*5;
+        color: color(light);
+        display: block;
       }
     }
   }
