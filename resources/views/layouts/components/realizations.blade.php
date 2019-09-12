@@ -1,3 +1,7 @@
+@php
+    global $post;
+@endphp
+
 <section class="realizations">
         <header class="realizations__header">
             <h1 class="realizations__title">
@@ -15,90 +19,33 @@
           @endif
         </nav>
     </div>
+
+    {{ q }}
+
+    @if (!have_posts())
+    <div class="alert alert-warning">
+        {{ __('Sorry, no results were found.', 'sage') }}
+    </div>
+    {!! get_search_form(false) !!}
+    @endif
     <div class="realizations__wrapper">
-        <div class="realizations__content">
-            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
+        @while (have_posts()) @php the_post() @endphp
+        @php
+            $photo = get_post_thumbnail_id();
+        @endphp
+        <a  href="{{ the_permalink() }}" class="realizations__content">
+            {!! image($photo, 'full', 'realizations__photo') !!}
             <div class="realizations__description">
             <div class="realizations__overlay"></div>
                 <h2 class="realizations__subtitle">
-                    Project name
+                    {{the_title()}}
                 </h2>
-                <p class="realizations__desc">
-                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
-                </p>
+                <div class="realizations__desc">
+                    {{ the_excerpt() }}
+                </div>
             </div>
-        </div>
-        <div class="realizations__content">
-            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
-            <div class="realizations__description">
-            <div class="realizations__overlay"></div>
-                <h2 class="realizations__subtitle">
-                    Project name
-                </h2>
-                <p class="realizations__desc">
-                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
-                </p>
-            </div>
-        </div>
-        <div class="realizations__content">
-            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
-            <div class="realizations__description">
-            <div class="realizations__overlay"></div>
-                <h2 class="realizations__subtitle">
-                    Project name
-                </h2>
-                <p class="realizations__desc">
-                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
-                </p>
-            </div>
-        </div>
-        <div class="realizations__content">
-            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
-            <div class="realizations__description">
-            <div class="realizations__overlay"></div>
-                <h2 class="realizations__subtitle">
-                    Project name
-                </h2>
-                <p class="realizations__desc--right">
-                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
-                </p>
-            </div>
-        </div>
-        <div class="realizations__content">
-            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
-            <div class="realizations__description">
-            <div class="realizations__overlay"></div>
-                <h2 class="realizations__subtitle">
-                    Project name
-                </h2>
-                <p class="realizations__desc">
-                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
-                </p>
-            </div>
-        </div>
-        <div class="realizations__content">
-            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
-            <div class="realizations__description">
-            <div class="realizations__overlay"></div>
-                <h2 class="realizations__subtitle">
-                    Project name
-                </h2>
-                <p class="realizations__desc">
-                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
-                </p>
-            </div>
-        </div>
-        <div class="realizations__content">
-            <img src="@asset('images/filmy_z_konferencji_eventow_imprez.png')" alt="photo" class="realizations__photo">
-            <div class="realizations__description">
-            <div class="realizations__overlay"></div>
-                <h2 class="realizations__subtitle">
-                    Project name
-                </h2>
-                <p class="realizations__desc--right">
-                        Pozwalają zarządzać dużymi sieciami czy aplikacjami i szybko rozwiązywać problemy czy wprowadzać zmiany w systemach.
-                </p>
-            </div>
-        </div>
+        </a>
+        @endwhile
     </div>
 </section>
+

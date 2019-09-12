@@ -287,7 +287,7 @@ function custom_post_type() {
             // Features this CPT supports in Post Editor
             'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
             // You can associate this CPT with a taxonomy or custom taxonomy. 
-            'taxonomies'          => array( 'genres' ),
+            'taxonomies'          => array( 'category' ),
             /* A hierarchical CPT is like Pages and can have
             * Parent and child items. A non-hierarchical CPT
             * is like Posts.
@@ -317,3 +317,16 @@ function custom_post_type() {
     */
      
     add_action( 'init', 'custom_post_type', 0 );
+
+    add_filter('pre_get_posts', 'query_post_type');
+    function query_post_type($query) {
+        if( is_category() ) {
+            $post_type = get_query_var('post_type');
+            if($post_type)
+                $post_type = $post_type;
+            else
+                $post_type = array('nav_menu_item', 'post', 'projects'); // don't forget nav_menu_item to allow menus to work!
+            $query->set('post_type',$post_type);
+            return $query;
+            }
+    }

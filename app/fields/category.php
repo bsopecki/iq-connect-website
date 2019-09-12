@@ -7,10 +7,10 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $category = new FieldsBuilder('category');
 
 $category
-    ->setLocation('taxonomy', '==', 'product_cat');
+    ->setLocation('taxonomy', '==', 'category');
   
 $category
     ->addWysiwyg('header', ['label'=>'Nagłówek'])
     ->addImage('bg_image', ['label'=>'Zdjęcie w tle'])
-    ->addRelationship('products', ['label'=>'Produkty', 'post_type'=>'product']);
+    ->addRelationship('projects', ['label'=>'Projekty', 'post_type'=>'project']);
 return $category;

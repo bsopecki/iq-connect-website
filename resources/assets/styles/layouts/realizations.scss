@@ -151,24 +151,17 @@
   }
 
   &__description {
-    @include cssLock(
-      "max-height",
-      360,
-      1920,
-      ($gutter_num * 26, $gutter_num * 41)
-    );
-
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    position: absolute;
-    top: 0;
-    left: 0;
+    padding: ($gutter * 4);
     height: 100%;
+    width: 100%;
     opacity: 1;
-    z-index: 1;
-    padding: $gutter * 2;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: color(light);
+    text-decoration: none;
 
     &:hover {
       opacity: 1;
@@ -182,19 +175,8 @@
   }
 
   &__subtitle {
-    @include cssLock(
-      "margin-left",
-      360,
-      1920,
-      ($gutter_num * 4, $gutter_num * 4)
-    );
-
-    color: color(light);
-
-    @include media(lg) {
-      color: color(light);
-      margin-bottom: $gutter*-7.5;
-    }
+    display: block;
+    margin: 0 0 $gutter * 4;
   }
 
   &__desc {
@@ -202,27 +184,12 @@
 
     display: none;
     color: color(light);
+    line-height: 1.5;
+    max-width: 100%;
 
     @include media(lg) {
-      margin-left: $gutter * 4;
-      margin-right: $gutter * 19;
-      margin-bottom: $gutter*5;
       display: block;
-      line-height: 1.5;
-    }
-
-    &--right {
-      @extend .text;
-
-      display: none;
-
-      @include media(lg) {
-        margin-right: $gutter * 95;
-        margin-left: $gutter * 4;
-        margin-bottom: $gutter*5;
-        color: color(light);
-        display: block;
-      }
+      max-width: $gutter * 45;
     }
   }
 }

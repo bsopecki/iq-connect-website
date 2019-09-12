@@ -1,0 +1,26 @@
+.website {
+  @include cssLock(
+    "margin-top",
+    360,
+    1920,
+    ($gutter_num * 3, $gutter_num * 5.625)
+  );
+
+  border-top: $gutter * 0.25 solid color(primary);
+
+  .background {
+    height: 100vh;
+    position: relative;
+
+    @include media(lg) {
+      max-height: 50vh;
+    }
+
+    &__image {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      object-fit: cover;
+    }
+  }
+}
