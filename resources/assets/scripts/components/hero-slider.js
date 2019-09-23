@@ -6,14 +6,17 @@ const CONFIG = {
 const flickity = {
     init() {
         const {WRAPPER} = CONFIG;
-        this.flkty = new Flickity( WRAPPER, {
-            draggable: true,
-            cellAlign: 'left',
-            contain: true,
-            prevNextButtons: false,
-            pageDots: true,
-            autoPlay: false,
-          });
+        this.elem = document.querySelector(WRAPPER);
+        if(this.elem) {
+            this.flkty = new Flickity( WRAPPER, {
+                draggable: true,
+                cellAlign: 'left',
+                contain: true,
+                prevNextButtons: false,
+                pageDots: true,
+                autoPlay: false,
+              });
+        }
     },
 };
 

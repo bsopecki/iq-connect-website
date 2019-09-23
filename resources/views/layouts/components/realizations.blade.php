@@ -20,8 +20,6 @@
         </nav>
     </div>
 
-    {{ q }}
-
     @if (!have_posts())
     <div class="alert alert-warning">
         {{ __('Sorry, no results were found.', 'sage') }}
@@ -48,4 +46,6 @@
         @endwhile
     </div>
 </section>
+@include('layouts.components.contact-section')
+@include('layouts.components.footer')
 
