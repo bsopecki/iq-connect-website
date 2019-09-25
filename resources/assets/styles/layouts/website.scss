@@ -34,6 +34,7 @@
     @include cssLock("top", 360, 1920, ($gutter_num * 13, $gutter_num * 26));
 
     position: absolute;
+    height: auto;
   }
 
   &__title {
