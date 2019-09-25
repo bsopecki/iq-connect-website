@@ -14,7 +14,7 @@
     list-style: none;
     padding: 0;
 
-    @include media(xl) {
+    @include media(lg) {
       grid-template-columns: repeat(4, 1fr);
     }
   }

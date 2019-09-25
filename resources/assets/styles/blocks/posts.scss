@@ -13,7 +13,7 @@
   list-style: none;
   padding: 0;
 
-  @include media(xl) {
+  @include media(lg) {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -56,7 +56,7 @@
     color: color(gray);
     font-weight: 300;
 
-    @include media(xl) {
+    @include media(lg) {
       color: color(light-gray);
     }
   }
