@@ -1,0 +1,160 @@
+.website {
+  @include cssLock(
+    "margin-top",
+    360,
+    1920,
+    ($gutter_num * 6.8, $gutter_num * 7)
+  );
+
+  position: relative;
+  border-top: $gutter * 0.25 solid color(primary);
+
+  &__photo {
+    @include cssLock(
+      "max-height",
+      360,
+      1920,
+      ($gutter_num * 25, $gutter_num * 80)
+    );
+
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &__image {
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 40, $gutter_num * 180)
+    );
+    @include cssLock("top", 360, 1920, ($gutter_num * 13, $gutter_num * 26));
+
+    position: absolute;
+    height: auto;
+  }
+
+  &__title {
+    @extend .subtitle;
+
+    @include cssLock(
+      "margin-top",
+      360,
+      1920,
+      ($gutter_num * 40, $gutter_num * 140)
+    );
+
+    position: relative;
+    text-transform: uppercase;
+    color: color(primary);
+    text-align: center;
+  }
+
+  &__slogan {
+    @extend .title;
+  }
+
+  &__description {
+    @extend .text;
+
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 30, $gutter_num * 75)
+    );
+    @include cssLock(
+      "margin-top",
+      360,
+      1920,
+      ($gutter_num * 2, $gutter_num * 4)
+    );
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.2;
+    color: color(gray);
+  }
+
+  &__box {
+    @include cssLock(
+      "max-width",
+      360,
+      1920,
+      ($gutter_num * 40, $gutter_num * 90)
+    );
+    @include cssLock(
+      "margin-top",
+      360,
+      1920,
+      ($gutter_num * 3, $gutter_num * 7)
+    );
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      ($gutter_num * 6, $gutter_num * 12.5)
+    );
+
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__color {
+    @include cssLock(
+      "width",
+      360,
+      1920,
+      ($gutter_num * 7.5, $gutter_num * 15)
+    );
+    @include cssLock(
+      "max-height",
+      360,
+      1920,
+      ($gutter_num * 10.5, $gutter_num * 22)
+    );
+
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__overlay {
+    @include cssLock(
+      "height",
+      360,
+      1920,
+      ($gutter_num * 7.5, $gutter_num * 15)
+    );
+
+    width: 100%;
+    border-radius: $gutter*1.25;
+
+    &--border {
+      border: $gutter*0.5 solid color(primary);
+    }
+  }
+
+  &__code {
+    display: none;
+
+    @include media(lg) {
+      display: block;
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__overwiev {
+    object-fit: cover;
+    width: 100%;
+  }
+}
