@@ -1,0 +1,103 @@
+.footer {
+  @include cssLock(
+    "margin-top",
+    360,
+    1920,
+    ($gutter_num * 4, $gutter_num * 19)
+  );
+
+  &__wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: unset;
+    list-style: none;
+    padding: 0;
+
+    @include media(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__title {
+    @extend .subtitle;
+
+    color: color(secondary);
+    padding-bottom: $gutter * 2;
+    font-weight: 400;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $gutter * 2;
+
+    &--hidden {
+      display: none;
+
+      @include media(lg) {
+        display: flex;
+      }
+    }
+  }
+
+  &__link {
+    padding: $gutter * 0.5;
+  }
+
+  &__content {
+    @extend .text;
+
+    color: color(primary);
+  }
+
+  &__media-box {
+    display: flex;
+  }
+
+  &__media {
+    @extend .text;
+
+    @include cssLock("width", 360, 1920, ($gutter_num * 3, $gutter_num * 4));
+    @include cssLock("height", 360, 1920, ($gutter_num * 3, $gutter_num * 4));
+
+    border-radius: 50%;
+    border: $gutter * 0.25 solid color(primary);
+    text-align: center;
+    margin: $gutter * 2;
+    color: color(primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      color: color(light);
+      background-color: color(primary);
+      transition: $transition;
+    }
+  }
+
+  &__copy {
+    @include cssLock(
+      "margin-top",
+      360,
+      1920,
+      ($gutter_num * 5, $gutter_num * 15)
+    );
+
+    text-align: center;
+  }
+
+  &__copyright {
+    @extend .text;
+
+    @include cssLock(
+      "padding",
+      360,
+      1920,
+      ($gutter_num * 0.5, $gutter_num * 1)
+    );
+
+    color: color(secondary);
+  }
+}
