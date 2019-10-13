@@ -1,9 +1,9 @@
 .footer {
   @include cssLock(
-    "margin-top",
+    "padding-top",
     360,
     1920,
-    ($gutter_num * 4, $gutter_num * 19)
+    ($gutter_num * 4, $gutter_num * 35)
   );
 
   &__wrapper {
